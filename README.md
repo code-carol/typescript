@@ -71,3 +71,32 @@ mustBeAString = 'Catdog';
 mustBeAString = 1337;
 // Error: Type 'number' is not assignable to type 'string'
 ```
+
+## The tsconfig.json File
+
+The `tsconfig.json` file is always placed in the root of your project and you can customise what rules you want the TypeScript compiler to enforce.
+
+Create the file with `tsc --init` command.
+
+```
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "strictNullChecks": true
+  },
+  "include": ["**/*.ts"]
+}
+```
+
+In the JSON, there are several properties:
+
+- "compilerOptions", which is a nested object that contains the rules for the TypeScript compiler to enforce.
+
+- "target", the value "es2017" means the project will be using the 2017 version of EcmaScript standards for JavaScript.
+
+- "module", this project will be using "commonjs" syntax to import and export modules.
+
+- "strictNullChecks", variables can only have null or undefined values if they are explicitly assigned those values.
+
+- "include" that determines what files the compiler applies the rules to. In this case ["**/*.ts"] means the compiler should check every single file that has a .ts extension.
