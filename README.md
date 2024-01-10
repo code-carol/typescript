@@ -4,6 +4,15 @@
 
 TypeScript is a programming language that allows us to write JavaScript with a set of tools called a type system that can spot potential bugs in, clarify the structure of, and help refactor our code.
 
+### Summary
+
+- [How to use it](#how-to-use-it)
+- [Type Inference](#type-inference)
+- [Type Shapes](#type-shapes)
+- [Type Any](#type-any)
+- [Type Annotations](#type-annotations)
+- [The tsconfig.json File](#the-tsconfigjson-file)
+
 ## How to use it
 
 ### 1.
