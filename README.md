@@ -83,7 +83,9 @@ Create the file with `tsc --init` command.
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "outDir": "./build",
+    "noUnusedLocals": true
   },
   "include": ["**/*.ts"]
 }
@@ -100,3 +102,7 @@ In the JSON, there are several properties:
 - "strictNullChecks", variables can only have null or undefined values if they are explicitly assigned those values.
 
 - "include" that determines what files the compiler applies the rules to. In this case ["**/*.ts"] means the compiler should check every single file that has a .ts extension.
+
+- "outDir" add the js files to a folder in your directory
+
+- "noUnusedLocals" shows all the variables that are not being used
