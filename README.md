@@ -19,7 +19,7 @@ TypeScript is a programming language that allows us to write JavaScript with a s
 - [Void Return Type](#void-return-type)
 - [Documenting Functions](#documenting-functions)
 
-## How to use it
+## ⭐️ How to use it
 
 ### 1.
 
@@ -35,7 +35,7 @@ TypeScript transpiler can be used on the command line by running the `tsc` comma
 
 If the TypeScript code can be converted into working JavaScript, the transpiler will output a JavaScript version of the file (.js).
 
-## Type Inference
+## ⭐️ Type Inference
 
 When we declare a variable with an initial value, the variable can never be reassigned a value of a different data type.
 
@@ -47,7 +47,7 @@ order = 1;
 
 Error: `Type 'number' is not assignable to type 'string'.`
 
-## Type Shapes
+## ⭐️ Type Shapes
 
 TypeScript knows what types our objects are, it also knows what shapes our objects adhere to. An object’s shape describes, among other things, what properties and methods it does or doesn’t contain.
 
@@ -62,7 +62,7 @@ TypeScript knows what types our objects are, it also knows what shapes our objec
 // Did you mean 'toLowerCase'?
 ```
 
-## Type Any
+## ⭐️ Type Any
 
 Variables of type `any` can be assigned to any value and TypeScript won’t give an error if they’re reassigned to a different type later on.
 
@@ -73,7 +73,7 @@ onOrOff = 1;
 onOrOff = false;
 ```
 
-## Type Annotations
+## ⭐️ Type Annotations
 
 We can declare a variable and the type of the variable without an initial value.
 
@@ -87,7 +87,7 @@ mustBeAString = 1337;
 // Error: Type 'number' is not assignable to type 'string'
 ```
 
-## The tsconfig.json File
+## ⭐️ The tsconfig.json File
 
 The `tsconfig.json` file is always placed in the root of your project and you can customise what rules you want the TypeScript compiler to enforce.
 
@@ -122,7 +122,7 @@ In the JSON, there are several properties:
 
 - "noUnusedLocals" shows all the variables that are not being used
 
-## Parameter Type Annotations
+## ⭐️ Parameter Type Annotations
 
 Function parameters can be given type annotations with the same syntax as variable declarations: a colon next to the name.
 
@@ -137,7 +137,7 @@ printKeyValue('Courage', 1337); // Prints: Courage: 1337
 printKeyValue('Mood', 'scared'); // Prints: Mood: scared
 ```
 
-## Optional Parameters
+## ⭐️ Optional Parameters
 
 To indicate that a parameter is intentionally optional, we add a `?` after its name. This tells TypeScript that the parameter is allowed to be undefined and doesn’t always have to be provided.
 
@@ -149,7 +149,7 @@ function greet(name?: string) {
 greet(); // Prints: Hello, Anonymous!
 ```
 
-## Default Parameters
+## ⭐️ Default Parameters
 
 If a parameter is assigned a default value, TypeScript will infer the variable type to be the same as the default value’s type.
 
@@ -159,7 +159,7 @@ function greet(name = 'Anonymous') {
 }
 ```
 
-## Inferring Return Types
+## ⭐️ Inferring Return Types
 
 TypeScript can also infer the types of values returned by functions.
 
@@ -172,7 +172,7 @@ const liquidAmount: number = ouncesToCups(3);
 // Type 'string' is not assignable to type 'number'.
 ```
 
-## Explicit Return Types
+## ⭐️ Explicit Return Types
 
 If we’d like to be explicit about what type a function returns, we can add an explicit type annotation after its closing parenthesis.
 
@@ -185,7 +185,7 @@ return undefined;
 // Typescript Error: Type 'undefined' is not assignable to type 'string'.
 };
 
-## Void Return Type
+## ⭐️ Void Return Type
 
 It's often preferred to use type annotations for functions, even when those functions don’t return anything.
 
@@ -193,7 +193,7 @@ function logGreeting(name:string)`: void`{
 console.log("Hello " + name!)
 }
 
-## Documenting Functions
+## ⭐️ Documenting Functions
 
 It’s common in TypeScript to see a third comment style: documentation comments. A documentation comment is denoted with the first line `/**` and a final line `*/.` It’s common for each line within the comment to start with an asterisk `(*)`.
 
