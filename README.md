@@ -1,4 +1,4 @@
-# TypeScript
+# 💻 TypeScript
 
 [Documentation](https://www.typescriptlang.org/)
 
