@@ -4,23 +4,11 @@
 
 TypeScript is a programming language that allows us to write JavaScript with a set of tools called a type system that can spot potential bugs in, clarify the structure of, and help refactor our code.
 
-### Summary
-
-- [How to use it](#how-to-use-it)
-- [Type Inference](#type-inference)
-- [Type Shapes](#type-shapes)
-- [Type Any](#type-any)
-- [Type Annotations](#type-annotations)
-- [The tsconfig.json File](#the-tsconfigjson-file)
-- [Parameter Type Annotations](#parameter-type-annotations)
-- [Optional Parameters](#optional-parameters)
-- [Inferring Return Types](#inferring-return-types)
-- [Explicit Return Types](#explicit-return-types)
-- [Void Return Type](#void-return-type)
-- [Documenting Functions](#documenting-functions)
-
-## ⭐️ How to use it
-
+<details>
+   <summary>
+     <h2>⭐️ How to use it</h2>
+   </summary>
+  
 ### 1.
 
 We write TypeScript code in files with the extension `.ts`.
@@ -34,6 +22,8 @@ TypeScript transpiler can be used on the command line by running the `tsc` comma
 ### 3.
 
 If the TypeScript code can be converted into working JavaScript, the transpiler will output a JavaScript version of the file (.js).
+</details>
+
 
 ## ⭐️ Type Inference
 
