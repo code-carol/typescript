@@ -16,7 +16,7 @@ We run our code through the TypeScript transpiler. The transpiler will check tha
 
 TypeScript transpiler can be used on the command line by running the `tsc` command.
 
-Makes the transpiled code slightly smaller, when transpiling large programs, the file size savings can be significant `tsc fileName.ts --target esnext`
+Makes the transpiled code slightly smaller, when transpiling large programs, the file size savings can be significant `tsc fileName.ts --target esnext`.
 
 ### 3.
 
@@ -26,7 +26,9 @@ If the TypeScript code can be converted into working JavaScript, the transpiler 
 
 The `tsconfig.json` file is always placed in the root of your project and you can customise what rules you want the TypeScript compiler to enforce.
 
-Create the file with `tsc --init` command.
+- Create the file with `tsc --init` command.
+- Default config `npm run tsc -- --init` command.
+- Once TypeScript is running in watch mode, the type-checking output will automatically update as we save changes to TypeScript files. `npm run tsc -- --watch`
 
 ```
 {
@@ -56,6 +58,32 @@ In the JSON, there are several properties:
 - "outDir" add the js files to a folder in your directory
 
 - "noUnusedLocals" shows all the variables that are not being used
+
+### Configuration reference
+
+[TS Config Options](https://www.typescriptlang.org/tsconfig/#compilerOptions)
+
+- compilerOptions: The bulk of options. Covers how TypeScript should type check and transpile code into JavaScript.
+- exclude: Specifies an array of globs (like src/\*_/_) to remove from files defined in include.
+- extends: Loads an external TypeScript configuration file as the base configuration. This makes sharing common configurations possible.
+- files: Specifies specific files to include.
+- include: Specifies an array of globs (like src/\*_/_) to include.
+
+### Common Configuration Properties
+
+- strict: When true, requires that all code must adhere to a variety of type standards, like passing proper arguments to methods and treating null and undefined as separate types. Often projects will enable strict, but then override specific parts of strict by turning off features like the strictFunctionTypes option.
+
+- paths: Allows re-mapping imports. If we have imports like import MyComponent from './app/src/components/MyComponent', we may want to shorten the import path to a shorthand path like '~/components/MyComponent'. The paths option allows us to define convenient short-hand conventions for paths when writing code. When TypeScript transpiles our code, it will use this mapping to insert the correct paths.
+
+- allowJS: The allowJs compiler option allows constructs declared in JavaScript files to factor into type-checking TypeScript files. This is a great option to set to true when migrating a JavaScript codebase to TypeScript.
+
+- noUnusedParameters: Ensures that every parameter defined on a function is used inside the function.
+
+- noUnusedLocals: Ensures that every defined variable is used somewhere.
+
+- sourceMap: Generates source map files, which help debuggers and error reporting services display the original TypeScript code when reporting errors, instead of the transpiled and minified JavaScript code.
+
+- resolveJsonModule: Allows importing \*.json files inside TypeScript files.
 
 ## ⭐️ Type Inference
 
