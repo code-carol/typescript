@@ -16,6 +16,8 @@ We run our code through the TypeScript transpiler. The transpiler will check tha
 
 TypeScript transpiler can be used on the command line by running the `tsc` command.
 
+Makes the transpiled code slightly smaller, when transpiling large programs, the file size savings can be significant `tsc fileName.ts --target esnext`
+
 ### 3.
 
 If the TypeScript code can be converted into working JavaScript, the transpiler will output a JavaScript version of the file (.js).
