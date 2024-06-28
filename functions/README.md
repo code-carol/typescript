@@ -71,7 +71,7 @@ function logGreeting(name:string)`: void`{
 console.log("Hello " + name!)
 }
 
-## ⭐️ Documenting Functions
+## ⭐️ Documentation Comment
 
 It’s common in TypeScript to see a third comment style: documentation comments. A documentation comment is denoted with the first line `/**` and a final line `*/.` It’s common for each line within the comment to start with an asterisk `(*)`.
 
